@@ -1,0 +1,128 @@
+{
+ "allow_import": 1,
+ "autoname": "BEN-MOD-.YYYY.-.#####",
+ "creation": "2021-06-07 15:16:58.222476",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "beneficiary",
+  "beneficiary_name",
+  "type",
+  "assistance_type",
+  "column_break_3",
+  "modification_date",
+  "company",
+  "details_section",
+  "beneficiary_modification_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Beneficiary",
+   "options": "Beneficiary Data",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "beneficiary.beneficiary_name",
+   "fieldname": "beneficiary_name",
+   "fieldtype": "Data",
+   "label": "Beneficiary Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary.type",
+   "fieldname": "type",
+   "fieldtype": "Data",
+   "label": "Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary.assistance_type",
+   "fieldname": "assistance_type",
+   "fieldtype": "Link",
+   "label": "Assistance Type",
+   "options": "Assistance Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "modification_date",
+   "fieldtype": "Date",
+   "label": "Modification Date",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.company",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Beneficiary Modification Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Beneficiary Modification",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Beneficiary Modification",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "beneficiary_modification_details",
+   "fieldtype": "Table",
+   "label": "Beneficiary Modification Details",
+   "options": "Beneficiary Modification Details",
+   "reqd": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-06-07 15:27:13.248200",
+ "modified_by": "Administrator",
+ "module": "PAV Beneficiary",
+ "name": "Beneficiary Modification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "beneficiary_name",
+ "track_changes": 1
+}

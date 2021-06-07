@@ -1,0 +1,207 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-02-15 20:14:50.541244",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "requester_details_section",
+  "name_of_requester",
+  "gender",
+  "age",
+  "dob",
+  "age_html",
+  "req_mob_no",
+  "phone_no",
+  "column_break_6",
+  "type",
+  "assistance_type",
+  "address",
+  "section_break_10",
+  "explain_the_situation",
+  "section_break_16",
+  "\u0627\u0633\u0645_\u0627\u0644\u0634\u062e\u0635_\u0627\u0644\u0630\u064a_\u0627\u0648\u0635\u0644\u0643_\u0625\u0644\u064a\u0646\u0627_\u0627\u0648_\u062a\u0631\u063a\u0628_\u0627\u0646_\u0646\u062a\u0648\u0627\u0635\u0644_\u0645\u0639\u0647_\u0639\u0646\u062f_\u0627\u0644\u0644\u0632\u0648\u0645",
+  "reference_person",
+  "phone_reference_person",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "ASS-REQ-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requester_details_section",
+   "fieldtype": "Section Break",
+   "label": "Requester Details"
+  },
+  {
+   "fieldname": "name_of_requester",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Beneficiary Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "Gender",
+   "options": "Gender",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Age",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "Date of Birth",
+   "read_only": 1
+  },
+  {
+   "fieldname": "age_html",
+   "fieldtype": "HTML",
+   "label": "Age",
+   "read_only": 1
+  },
+  {
+   "fieldname": "req_mob_no",
+   "fieldtype": "Data",
+   "label": "Mobile No.",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Data",
+   "label": "Phone No.",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0639\u0644\u0627\u062c\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0646\u0642\u062f\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u063a\u0630\u0627\u0626\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0632\u0648\u0627\u062c\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0645\u0633\u0639\u0631\n\u0645\u0633\u0627\u0639\u062f\u0627\u062a \u0627\u062e\u0631\u0649",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.type",
+   "fieldname": "assistance_type",
+   "fieldtype": "Link",
+   "label": "Assistance Type",
+   "options": "Assistance Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "explain_the_situation",
+   "fieldtype": "Text Editor",
+   "label": "Explain the Situation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "\u0627\u0633\u0645_\u0627\u0644\u0634\u062e\u0635_\u0627\u0644\u0630\u064a_\u0627\u0648\u0635\u0644\u0643_\u0625\u0644\u064a\u0646\u0627_\u0627\u0648_\u062a\u0631\u063a\u0628_\u0627\u0646_\u0646\u062a\u0648\u0627\u0635\u0644_\u0645\u0639\u0647_\u0639\u0646\u062f_\u0627\u0644\u0644\u0632\u0648\u0645",
+   "fieldtype": "Heading",
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0634\u062e\u0635 \u0627\u0644\u0630\u064a \u0627\u0648\u0635\u0644\u0643 \u0625\u0644\u064a\u0646\u0627 \u0627\u0648 \u062a\u0631\u063a\u0628 \u0627\u0646 \u0646\u062a\u0648\u0627\u0635\u0644 \u0645\u0639\u0647 \u0639\u0646\u062f \u0627\u0644\u0644\u0632\u0648\u0645"
+  },
+  {
+   "fieldname": "reference_person",
+   "fieldtype": "Data",
+   "label": "Closest Person Contact Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "phone_reference_person",
+   "fieldtype": "Data",
+   "label": "Closest Person Phone",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Assistance Request",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-06-07 14:36:07.867378",
+ "modified_by": "Administrator",
+ "module": "PAV Beneficiary",
+ "name": "Assistance Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "name_of_requester",
+ "track_changes": 1
+}

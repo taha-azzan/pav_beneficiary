@@ -1,0 +1,452 @@
+{
+ "allow_events_in_timeline": 1,
+ "autoname": "naming_series:",
+ "creation": "2021-02-24 20:43:43.273906",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "approved",
+  "transaction_no",
+  "transaction_date",
+  "column_break_2",
+  "assistance_request",
+  "assistance_form",
+  "beneficiary_data",
+  "personal_details_section",
+  "name_of_requester",
+  "type",
+  "assistance_type",
+  "age",
+  "dob",
+  "req_mob_no",
+  "column_break_6",
+  "gender",
+  "health_status",
+  "social_status",
+  "financial_status",
+  "job",
+  "average_monthly_income",
+  "average_daily_income",
+  "section_break_11",
+  "type_of_housing",
+  "governorate",
+  "district",
+  "address",
+  "section_break_27",
+  "payment_form_other",
+  "family_background_section",
+  "house_details",
+  "family_members",
+  "section_break_32",
+  "male_no",
+  "female_no",
+  "total_family_members",
+  "column_break_33",
+  "sick_male",
+  "sick_female",
+  "column_break_28",
+  "able_to_work",
+  "able_to_rehabilitation",
+  "section_break_29",
+  "rehabilitation_type",
+  "benef_of_our_aid",
+  "section_break_45",
+  "qualifying_committee_suggestion",
+  "living_committee_suggestion",
+  "section_break_35",
+  "assistance_amount",
+  "currency",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "ANN-EVA-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "assistance_form.approved",
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Approved",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assistance_form.transaction_no",
+   "fieldname": "transaction_no",
+   "fieldtype": "Int",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0645\u0639\u0627\u0645\u0644\u0629",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "assistance_form.transaction_date",
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u0639\u0627\u0645\u0644\u0629",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "beneficiary_data.assistance_request",
+   "fieldname": "assistance_request",
+   "fieldtype": "Link",
+   "label": "\u0637\u0644\u0628 \u0627\u0644\u0645\u0633\u0627\u0639\u062f\u0629",
+   "options": "Assistance Request",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.assistance_form",
+   "fieldname": "assistance_form",
+   "fieldtype": "Link",
+   "label": "\u0627\u0633\u062a\u0645\u0627\u0631\u0629 \u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0627\u0648\u0644\u064a\u0629",
+   "options": "Assistance Form",
+   "read_only": 1
+  },
+  {
+   "fieldname": "beneficiary_data",
+   "fieldtype": "Link",
+   "label": "\u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0645\u0633\u062a\u0641\u064a\u062f",
+   "options": "Beneficiary Data",
+   "reqd": 1
+  },
+  {
+   "fieldname": "personal_details_section",
+   "fieldtype": "Section Break",
+   "label": "\u0627\u0644\u0628\u064a\u0627\u0646\u0627\u062a \u0627\u0644\u0634\u062e\u0635\u064a\u0629 \u0644\u0644\u0645\u0633\u062a\u0641\u064a\u062f"
+  },
+  {
+   "fetch_from": "beneficiary_data.name_of_requester",
+   "fieldname": "name_of_requester",
+   "fieldtype": "Data",
+   "label": "\u0627\u0633\u0645 \u0627\u0644\u0633\u062a\u0641\u064a\u062f",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fetch_from": "assistance_form.type",
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u0646\u0648\u0639",
+   "options": "\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0639\u0644\u0627\u062c\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0646\u0642\u062f\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u063a\u0630\u0627\u0626\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0632\u0648\u0627\u062c\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0645\u0633\u0639\u0631\n\u0645\u0633\u0627\u0639\u062f\u0627\u062a \u0627\u062e\u0631\u0649",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.assistance_type",
+   "fieldname": "assistance_type",
+   "fieldtype": "Link",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0645\u0633\u0627\u0639\u062f\u0629",
+   "options": "Assistance Type",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.age",
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "label": "\u0627\u0644\u0639\u0645\u0631",
+   "read_only": 1
+  },
+  {
+   "fieldname": "dob",
+   "fieldtype": "Date",
+   "label": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u0645\u064a\u0644\u0627\u062f"
+  },
+  {
+   "fetch_from": "beneficiary_data.req_mob_no",
+   "fieldname": "req_mob_no",
+   "fieldtype": "Data",
+   "label": "\u0631\u0642\u0645 \u0627\u0644\u0647\u0627\u062a\u0641",
+   "options": "Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "beneficiary_data.gender",
+   "fieldname": "gender",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u062c\u0646\u0633",
+   "options": "Gender",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.health_status",
+   "fieldname": "health_status",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u062d\u0627\u0644\u0629 \u0627\u0644\u0635\u062d\u064a\u0629",
+   "options": "Health Status",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.social_status",
+   "fieldname": "social_status",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u062d\u0627\u0644\u0629 \u0627\u0644\u0627\u062c\u062a\u0645\u0627\u0639\u064a\u0629",
+   "options": "\u0627\u0639\u0632\u0628\n\u0645\u062a\u0632\u0648\u062c\n\u0645\u0637\u0644\u0642\n\u0627\u0631\u0645\u0644",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.financial_status",
+   "fieldname": "financial_status",
+   "fieldtype": "Select",
+   "label": "\u0627\u0644\u062d\u0627\u0644\u0629 \u0627\u0644\u0645\u0627\u062f\u064a\u0629",
+   "options": "\u0639\u0627\u0637\u0644\n\u0627\u062c\u0631 \u064a\u0648\u0645\u064a\n\u0645\u0648\u0638\u0641",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.job",
+   "fieldname": "job",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0639\u0645\u0644",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.average_monthly_income",
+   "fieldname": "average_monthly_income",
+   "fieldtype": "Currency",
+   "label": "\u0645\u062a\u0648\u0633\u0637 \u0627\u0644\u062f\u062e\u0644 \u0627\u0644\u0634\u0647\u0631\u064a",
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.average_daily_income",
+   "fieldname": "average_daily_income",
+   "fieldtype": "Currency",
+   "label": "\u0645\u062a\u0648\u0633\u0637 \u0627\u0644\u062f\u062e\u0644 \u0627\u0644\u064a\u0648\u0645\u064a",
+   "precision": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "beneficiary_data.type_of_housing",
+   "fieldname": "type_of_housing",
+   "fieldtype": "Select",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u0645\u0646\u0632\u0644",
+   "options": "\n\u0645\u0644\u0643\n\u0625\u064a\u062c\u0627\u0631",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.governorate",
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u0645\u062d\u0627\u0641\u0638\u0629",
+   "options": "Territory",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.district",
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "\u0627\u0644\u0645\u062f\u064a\u0631\u064a\u0629",
+   "options": "Territory",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "beneficiary_data.address",
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "\u0627\u0644\u0639\u0646\u0648\u0627\u0646",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_27",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payment_form_other",
+   "fieldtype": "Select",
+   "label": "\u0637\u0631\u0642 \u0627\u0644\u062f\u0641\u0639 \u0645\u0646 \u0627\u0644\u063a\u064a\u0631",
+   "options": "\n\u0646\u0642\u062f\u0627\u064b\n\u0627\u062e\u0631\u0649"
+  },
+  {
+   "fieldname": "family_background_section",
+   "fieldtype": "Section Break",
+   "label": "\u0627\u0644\u0645\u0639\u0644\u0648\u0645\u0627\u062a \u0627\u0644\u0639\u0627\u0626\u0644\u064a\u0629"
+  },
+  {
+   "fieldname": "house_details",
+   "fieldtype": "Table",
+   "label": "\u062d\u0627\u0644\u0629 \u0627\u0644\u0633\u0643\u0646",
+   "options": "House Details"
+  },
+  {
+   "fieldname": "family_members",
+   "fieldtype": "Table",
+   "label": "\u0627\u0641\u0631\u0627\u062f \u0627\u0644\u0627\u0633\u0631\u0629",
+   "options": "Family Members"
+  },
+  {
+   "fieldname": "section_break_32",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "male_no",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0630\u0643\u0648\u0631 \u0627\u0644\u0627\u0633\u0631\u0629"
+  },
+  {
+   "fieldname": "female_no",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0627\u0646\u0627\u062b \u0641\u064a \u0627\u0644\u0627\u0633\u0631\u0629"
+  },
+  {
+   "depends_on": "eval:doc.male_no && doc.female_no",
+   "fieldname": "total_family_members",
+   "fieldtype": "Data",
+   "label": "\u0639\u062f\u062f \u0627\u0641\u0631\u0627\u062f \u0627\u0644\u0627\u0633\u0631\u0629",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "sick_male",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0641\u0631\u0627\u062f \u0627\u0644\u0627\u0633\u0631\u0629 \u0627\u0644\u0645\u0631\u0636\u0649 \u0627\u0644\u0630\u0643\u0648\u0631"
+  },
+  {
+   "default": "0",
+   "fieldname": "sick_female",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0641\u0631\u0627\u062f \u0627\u0644\u0627\u0633\u0631\u0629 \u0627\u0644\u0645\u0631\u0636\u0649 \u0627\u0644\u0627\u0646\u0627\u062b"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "able_to_work",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0627\u0641\u0631\u0627\u062f \u0627\u0644\u0642\u0627\u062f\u0631\u064a\u0646 \u0639\u0644\u0649 \u0627\u0644\u0639\u0645\u0644"
+  },
+  {
+   "fieldname": "able_to_rehabilitation",
+   "fieldtype": "Int",
+   "label": "\u0639\u062f\u062f \u0627\u0644\u0627\u0641\u0631\u0627\u062f \u0627\u0644\u0642\u0627\u062f\u0631\u064a\u0646 \u0639\u0644\u0649 \u0627\u0644\u062a\u0623\u0647\u064a\u0644"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rehabilitation_type",
+   "fieldtype": "Data",
+   "label": "\u0646\u0648\u0639 \u0627\u0644\u062a\u0623\u0647\u064a\u0644"
+  },
+  {
+   "fieldname": "benef_of_our_aid",
+   "fieldtype": "Small Text",
+   "label": "\u0645\u062f\u0649 \u0627\u0633\u062a\u0641\u0627\u062f\u062a\u0643\u0645 \u0645\u0646 \u0627\u0644\u0645\u0628\u0644\u063a \u0627\u0644\u0634\u0647\u0631\u064a \u0645\u0646\u0627",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_45",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "qualifying_committee_suggestion",
+   "fieldtype": "Small Text",
+   "label": "\u0627\u0642\u062a\u0631\u0627\u062d\u0627\u062a \u0627\u0644\u0644\u062c\u0646\u0629 \u0627\u0644\u062a\u0623\u0647\u064a\u0644\u064a\u0629"
+  },
+  {
+   "fieldname": "living_committee_suggestion",
+   "fieldtype": "Small Text",
+   "label": "\u0627\u0642\u062a\u0631\u0627\u062d\u0627\u062a \u0627\u0644\u0644\u062c\u0646\u0629 \u0627\u0644\u0645\u0639\u064a\u0634\u064a\u0629"
+  },
+  {
+   "fieldname": "section_break_35",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "assistance_form.assistance_amount",
+   "fieldname": "assistance_amount",
+   "fieldtype": "Currency",
+   "label": "\u0645\u0628\u0644\u063a \u0627\u0644\u0645\u0633\u0627\u0639\u062f\u0629",
+   "options": "currency",
+   "precision": "1",
+   "read_only": 1
+  },
+  {
+   "default": "YER",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Annual Evaluation Form",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-06-07 14:36:04.893574",
+ "modified_by": "Administrator",
+ "module": "PAV Beneficiary",
+ "name": "Annual Evaluation Form",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Non Profit Member",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "name_of_requester",
+ "track_changes": 1
+}
