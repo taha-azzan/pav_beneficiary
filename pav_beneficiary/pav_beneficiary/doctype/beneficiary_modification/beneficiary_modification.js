@@ -45,7 +45,7 @@ frappe.ui.form.on(cur_frm.doctype, {
 				return;
 			}
 			frappe.call({
-				method: 'pav_beneficiary.beneficiary.utils.get_beneficiary_fields_label',
+				method: 'pav_beneficiary.pav_beneficiary.utils.get_beneficiary_fields_label',
 				callback: function(r) {
 					if(r.message){
 						show_dialog(frm, table, r.message);
@@ -80,7 +80,7 @@ var show_dialog = function(frm, table, field_labels) {
 		d.data.fieldname = property;
 		if(!property){return;}
 		frappe.call({
-			method: 'pav_beneficiary.beneficiary.utils.get_beneficiary_field_property',
+			method: 'pav_beneficiary.pav_beneficiary.utils.get_beneficiary_field_property',
 			args: {beneficiary: frm.doc.beneficiary, fieldname: property},
 			callback: function(r) {
 				if(r.message){

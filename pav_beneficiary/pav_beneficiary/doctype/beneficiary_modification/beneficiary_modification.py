@@ -7,7 +7,7 @@ import frappe
 from frappe import _
 from frappe.model.document import Document
 from frappe.utils import getdate
-from pav_beneficiary.beneficiary.utils import update_beneficiary
+from pav_beneficiary.pav_beneficiary.utils import update_beneficiary
 
 
 

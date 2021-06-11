@@ -1,0 +1,172 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-06-10 21:55:49.181374",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "type",
+  "assistance_type",
+  "assistance_frequency",
+  "column_break_4",
+  "aid_period",
+  "governorate",
+  "district",
+  "section_break_8",
+  "responsible",
+  "responsible_name",
+  "column_break_11",
+  "aid_distributor",
+  "section_break_13",
+  "get_beneficiary",
+  "number_of_beneficiaries",
+  "beneficiaries",
+  "section_break_16",
+  "aid_logs_created",
+  "aid_logs_submitted",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "AID-"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0639\u0644\u0627\u062c\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0646\u0642\u062f\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u063a\u0630\u0627\u0626\u064a\u0629\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0632\u0648\u0627\u062c\n\u0645\u0633\u0627\u0639\u062f\u0629 \u0645\u0633\u0639\u0631\n\u0645\u0633\u0627\u0639\u062f\u0627\u062a \u0627\u062e\u0631\u0649"
+  },
+  {
+   "fieldname": "assistance_type",
+   "fieldtype": "Link",
+   "label": "Assistance Type",
+   "options": "Assistance Type"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "aid_period",
+   "fieldtype": "Date",
+   "label": "AID Period"
+  },
+  {
+   "fieldname": "governorate",
+   "fieldtype": "Link",
+   "label": "Governorate",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "responsible_name",
+   "fieldtype": "Data",
+   "label": "Responsible Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "aid_distributor",
+   "fieldtype": "Data",
+   "label": "AID Distributor"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "number_of_beneficiaries",
+   "fieldtype": "Data",
+   "label": "Number Of Beneficiaries"
+  },
+  {
+   "fieldname": "beneficiaries",
+   "fieldtype": "Table",
+   "label": "Beneficiaries",
+   "options": "AID Entry Details"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AID Entry",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "aid_logs_created",
+   "fieldtype": "Check",
+   "label": "AID Logs Created"
+  },
+  {
+   "default": "0",
+   "fieldname": "aid_logs_submitted",
+   "fieldtype": "Check",
+   "label": "AID Logs Submitted"
+  },
+  {
+   "fieldname": "assistance_frequency",
+   "fieldtype": "Select",
+   "label": "Assistance Frequency",
+   "options": "\n\u0645\u0631\u0629 \u0648\u0627\u062d\u062f\u0629 \u0641\u0642\u0637\n\u0627\u0633\u0628\u0648\u0639\u064a\u0627\u064b\n\u0634\u0647\u0631\u064a\u0627\u064b\n\u0633\u0646\u0648\u064a\u0627\u064b"
+  },
+  {
+   "fieldname": "get_beneficiary",
+   "fieldtype": "Button",
+   "label": "get beneficiary"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-06-11 00:30:55.670572",
+ "modified_by": "Administrator",
+ "module": "PAV Beneficiary",
+ "name": "AID Entry",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
