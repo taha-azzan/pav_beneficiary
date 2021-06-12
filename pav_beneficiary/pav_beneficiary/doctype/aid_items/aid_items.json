@@ -8,7 +8,9 @@
   "item_name",
   "column_break_3",
   "qty",
-  "stock_uom"
+  "stock_uom",
+  "rate",
+  "amount"
  ],
  "fields": [
   {
@@ -47,10 +49,24 @@
    "label": "\u0627\u0644\u0648\u062d\u062f\u0629",
    "options": "UOM",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "read_only": 1
   }
  ],
  "istable": 1,
- "modified": "2021-06-07 14:36:10.608626",
+ "modified": "2021-06-12 07:48:56.752137",
  "modified_by": "Administrator",
  "module": "PAV Beneficiary",
  "name": "AID Items",

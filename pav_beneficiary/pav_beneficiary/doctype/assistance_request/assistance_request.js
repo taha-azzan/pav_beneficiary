@@ -74,29 +74,6 @@ var get_age = function (birth) {
 
 
 
-
-
-
-
-
-
-frappe.ui.form.on('Assistance Request', {
-	refresh(frm) {
-	cur_frm.set_query("assistance_type", function(doc, cdt, cdn) {
-	var d = locals[cdt][cdn];
-	return{
-		filters: [
-		    
-			['Assistance Type', 'assistance_type', '=', frm.doc.type],
-		
-		    ]
-	      };
-	    });
-    }
-});
-
-
-
 frappe.ui.form.on('Assistance Request', {
 	refresh(frm) {
 		if (frm.doc.docstatus==1){

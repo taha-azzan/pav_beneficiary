@@ -8,7 +8,9 @@
   "naming_series",
   "item",
   "type",
-  "uom"
+  "uom",
+  "section_break_5",
+  "accounts"
  ],
  "fields": [
   {
@@ -42,9 +44,19 @@
    "label": "UOM",
    "options": "UOM",
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "accounts",
+   "fieldtype": "Table",
+   "label": "Accounts",
+   "options": "AID Item Account"
   }
  ],
- "modified": "2021-06-07 14:35:59.658607",
+ "modified": "2021-06-12 09:19:49.831212",
  "modified_by": "Administrator",
  "module": "PAV Beneficiary",
  "name": "AID Item",

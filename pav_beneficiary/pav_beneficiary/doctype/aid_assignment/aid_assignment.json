@@ -1,0 +1,104 @@
+{
+ "autoname": "naming_series:",
+ "creation": "2021-06-12 07:38:38.667193",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "section_break_2",
+  "beneficiary",
+  "assistance_type",
+  "column_break_3",
+  "from_date",
+  "assistance_frequency",
+  "section_break_5",
+  "item",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "beneficiary",
+   "fieldtype": "Link",
+   "label": "Beneficiary",
+   "options": "Beneficiary Data"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Table",
+   "label": "Item",
+   "options": "AID Items"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "AID-ASI-.YYYY.-"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "beneficiary.assistance_type",
+   "fetch_if_empty": 1,
+   "fieldname": "assistance_type",
+   "fieldtype": "Link",
+   "label": "Assistance Type",
+   "options": "Assistance Type"
+  },
+  {
+   "default": "Today",
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AID Assignment",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "assistance_frequency",
+   "fieldtype": "Link",
+   "label": "Assistance Frequency",
+   "options": "Assistance Frequency"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-06-12 09:13:38.431748",
+ "modified_by": "Administrator",
+ "module": "PAV Beneficiary",
+ "name": "AID Assignment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "beneficiary",
+ "track_changes": 1
+}

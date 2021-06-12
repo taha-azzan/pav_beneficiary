@@ -5,32 +5,24 @@
  "engine": "InnoDB",
  "field_order": [
   "beneficiary",
-  "beneficiary_name",
-  "aid_period"
+  "beneficiary_name"
  ],
  "fields": [
   {
    "fieldname": "beneficiary",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Beneficiary",
-   "options": "Beneficiary Data"
+   "label": "Beneficiary"
   },
   {
-   "fetch_from": "beneficiary.beneficiary_name",
    "fieldname": "beneficiary_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Beneficiary Name"
-  },
-  {
-   "fieldname": "aid_period",
-   "fieldtype": "Date",
-   "label": "AID Period"
   }
  ],
  "istable": 1,
- "modified": "2021-06-11 00:26:07.940911",
+ "modified": "2021-06-12 09:17:43.961044",
  "modified_by": "Administrator",
  "module": "PAV Beneficiary",
  "name": "AID Entry Details",
