@@ -62,3 +62,9 @@ class AIDEntry(Document):
 				})
 				il = frappe.get_doc(log_args)
 				il.insert()
+
+	def get_existing_aid_logs(self):
+		logs = frappe.db.sql("""
+			select docstatus from `tabAID Log`
+			where parent = %s
+		""", [self.name], as_dict = True)

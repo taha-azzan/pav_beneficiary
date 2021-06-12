@@ -4,11 +4,23 @@
 frappe.ui.form.on('AID Entry', {
 	refresh: function(frm) {
 		frm.set_df_property("get_beneficiary", "hidden", frm.doc.__islocal ? 1:0);
-
+	
+		if (frm.doc.docstatus == 1) {
+			frm.events.add_context_buttons(frm);
+		}
 	},
+
+	add_context_buttons: function(frm) {
+			frm.add_custom_button(__("Submit AID Log"), function() {
+			frm.add_custom_button(__("Submit AID Log"), function() {	
+			}).addClass("btn-primary");	
+			}).addClass("btn-primary");
+	},
+
 	get_beneficiary: function(frm){
 		frm.events.fill_beneficiary(frm);
 	},
+
 	fill_beneficiary: function (frm) {
 		return frappe.call({
 			doc: frm.doc,
